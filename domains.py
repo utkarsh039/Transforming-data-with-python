@@ -3,7 +3,7 @@ import collections
 
 hn_stories=read.load_data()
 domains=hn_stories["url"]
-#print(collections.Counter(domains).most_common(100))
+
 
 domains2=domains.tolist()
 nosubdomains=[]
@@ -16,6 +16,6 @@ for i in domains2:
     else:
         nosubdomains.append(i)
 #print(collections.Counter(nosubdomains).most_common(100))
-#for name, row in domains.items():
+for name, row in domains.items():
     print("{0}: {1}".format(name, row))
 
